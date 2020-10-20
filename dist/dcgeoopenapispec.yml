@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: DC Geo API
+  description: A prototype API to illustrate DC Geo API specification for DCE's
+components:
+  securitySchemes:
+    bearerAuth:
+      description: "Default Authorization for API"
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
+paths:
+  /ping:
+    get:
+      description: Pings the service for health check
+      responses:
+        '200':
+          description: Successful response
+  /public:
+    get:
+      description: Sample public api
+      responses:
+        '200':
+          description: Successful response
+  /private:
+    get:
+      description: Sample private api
+      responses:
+        '200':
+          description: Successful response
